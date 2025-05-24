@@ -12,6 +12,24 @@ Whether you're collecting books from Edge of the Empire, Age of Rebellion, or Fo
 
 Use this API as a backend for your own app, or integrate it with tools like Postman, PowerApps, or a custom frontend
 
+## Table of Contents
+
+1. [Base URL](#base-url)
+2. [Properties](#properties)
+3. [API Endpoints](#api-endpoints)
+
+    3.1. [Create a Book](#create-a-book)
+
+    3.2. [Get All Books](#get-all-books)
+
+    3.3. [Get Book by ID](#get-a-book-by-id)
+
+    3.4. [Update Book](#update-a-book)
+
+    3.5. [Delete Book](#delete-a-book)
+
+4. [Authorization](#authorization)
+
 ##  Base URL
 The base URL will depend on your Azure deployment, typically:
 
@@ -129,7 +147,7 @@ Updates an existing book by id.
 }
 ```
 
-## Delete a Book
+### Delete a Book
 **DELETE /api/book/{id}**
 
 Deletes a book by id.
@@ -137,3 +155,7 @@ Deletes a book by id.
 
 #### Response
 ``` "The book is deleted: true"```
+
+## Authorization
+All endpoints use Function level authorization. Make sure to include your function key when calling these endpoints unless running locally or with anonymous access enabled.
+
